@@ -41,17 +41,17 @@ function readTextFile(displayAreaID,file) {
   var txt = "";
   txt = urlParams.get('lang');		var lang = txt==null? "2":txt;		//default language: English
   txt = urlParams.get('id');		var id = txt==null? "KWaNEpbj":txt;	//material_id: KWaNEpbj
-  txt = urlParams.get('f');		var f = txt==null? "":txt+"/";		//sub-folder name
-  txt = urlParams.get('w');		var w = txt==null? "1050":txt;
-  txt = urlParams.get('h');		var h = txt==null? "700":txt;
-  txt = urlParams.get('d');		var d = txt==null? "true":txt;
-  txt = urlParams.get('r');		var r = txt==null? "false":txt;
-  txt = urlParams.get('z');		var z = txt==null? "true":txt;
-  txt = urlParams.get('t');		var t = txt==null? "false":txt;
-  txt = urlParams.get('m');		var m = txt==null? "false":txt;
-  txt = urlParams.get('i');		var i = txt==null? "false":txt;
-  txt = urlParams.get('c');		var c = txt==null? "false":txt;
-  txt = urlParams.get('s');		var s = txt==null? "true":txt;
+  txt = urlParams.get('f');			var f = txt==null? "":txt+"/";		//sub-folder name
+  txt = urlParams.get('w');			var w = txt==null? "1050":txt;
+  txt = urlParams.get('h');			var h = txt==null? "700":txt;
+  txt = urlParams.get('d');			var d = txt==null? "true":txt;
+  txt = urlParams.get('r');			var r = txt==null? "false":txt;
+  txt = urlParams.get('z');			var z = txt==null? "true":txt;
+  txt = urlParams.get('t');			var t = txt==null? "false":txt;
+  txt = urlParams.get('m');			var m = txt==null? "false":txt;
+  txt = urlParams.get('i');			var i = txt==null? "false":txt;
+  txt = urlParams.get('c');			var c = txt==null? "false":txt;
+  txt = urlParams.get('s');			var s = txt==null? "true":txt;
   txt = urlParams.get('fs');		var fs = txt==null? "true":txt;
 
   var header = urlParams.get('header');  //name of the text file
@@ -66,26 +66,26 @@ function readTextFile(displayAreaID,file) {
 	/*
 	Example URL: .../index.html?id=FeUVMJAH&w=1000&h=600&d=false&r=true&lang=2
 	id: Material id number
-	w: Width 				(default 1050)
-	h: Height				(default 700)
+	w: Width 							(default 1050)
+	h: Height							(default 700)
 	d: Enable Dragging of Labels 		(default true)
 	r: Show Icon to Reset Construction 	(default false)
-	z: Enable Pan & Zoom 			(default false)
-	t: Show Toolbar 			(default false)
-	m: Show Menu 				(default false)
-	i: Show Input Bar 			(default false)
-	c: Enable Right-Click 			(default false)
-	s: Allow Automatic UpScale		(default true)
-	lang: 1-Chinese 2-English		(default Chinese)
+	z: Enable Pan & Zoom 				(default false)
+	t: Show Toolbar 					(default false)
+	m: Show Menu 						(default false)
+	i: Show Input Bar 					(default false)
+	c: Enable Right-Click 				(default false)
+	s: Allow Automatic UpScale			(default true)
+	lang: 1-Chinese 2-English			(default Chinese)
 	*/
 
-  var parameters = {	"material_id":id,
+  var parameters = {	"filename":"./material-"+id+".ggb",
                         "useBrowserForJS":false,
-			"showStartTooltip":false,
-			"showToolBarHelp":false,
-			"playButton":true,
-			"allowUpscale":s,
-			"showFullscreenButton":fs,
+						"showStartTooltip":false,
+						"showToolBarHelp":false,
+						"playButton":true,
+						"allowUpscale":s,
+						"showFullscreenButton":fs,
                         "width":w,
                         "height":h,
                         "enableLabelDrags":d,
