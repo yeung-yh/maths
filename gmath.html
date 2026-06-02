@@ -29,13 +29,13 @@ function readTextFile(displayAreaID,file) {var rawFile = new XMLHttpRequest(); r
 	const urlParams = new URLSearchParams(window.location.search);
   var txt = "";
   txt = urlParams.get('lang');		var lang = txt==null? "2":txt;		//default language: English
-  txt = urlParams.get('id');		var id = txt==null? "KWaNEpbj":txt;	//material_id: KWaNEpbj
+  txt = urlParams.get('id');		var id = txt==null? "v7hwvt99":txt;	//material_id: KWaNEpbj
   txt = urlParams.get('f');			var f = txt==null? "":txt+"/";		//sub-folder name
   txt = urlParams.get('w');			var w = txt==null? "1050":txt;
   txt = urlParams.get('h');			var h = txt==null? "700":txt;
   txt = urlParams.get('d');			var d = txt==null? "true":txt;
   txt = urlParams.get('r');			var r = txt==null? "false":txt;
-  txt = urlParams.get('z');			var z = txt==null? "true":txt;
+  txt = urlParams.get('z');			var z = txt==null? "false":txt;
   txt = urlParams.get('t');			var t = txt==null? "false":txt;
   txt = urlParams.get('m');			var m = txt==null? "false":txt;
   txt = urlParams.get('i');			var i = txt==null? "false":txt;
