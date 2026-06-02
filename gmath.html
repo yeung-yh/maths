@@ -18,21 +18,10 @@
 <div style="font-family:'verdana';margin-top:5px" id="footer"></div>
 
 <script>
-function readTextFile(displayAreaID,file) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function () {
-        if(rawFile.readyState === 4) {
-            if(rawFile.status === 200 || rawFile.status == 0) {
-                document.getElementById(displayAreaID).innerText = rawFile.responseText; 
-            }
-        }
-    }
-    rawFile.send(null);
-}
+function readTextFile(displayAreaID,file) {var rawFile = new XMLHttpRequest(); rawFile.open("GET", file, false); rawFile.onreadystatechange = function () {if(rawFile.readyState === 4) {if(rawFile.status === 200 || rawFile.status == 0) {document.getElementById(displayAreaID).innerText = rawFile.responseText;} } } rawFile.send(null);}
 </script>
 
-<script src="./deployggb.js"></script>
+<script src="https://www.geogebra.org/scripts/deployggb.js"></script>
 
 <script>
 	const version = "920";
@@ -79,7 +68,7 @@ function readTextFile(displayAreaID,file) {
 	lang: 1-Chinese 2-English			(default Chinese)
 	*/
 
-  var parameters = {	"filename":"./material-"+id+".ggb",
+  var parameters = {	"material_id":id,
                         "useBrowserForJS":false,
 						"showStartTooltip":false,
 						"showToolBarHelp":false,
